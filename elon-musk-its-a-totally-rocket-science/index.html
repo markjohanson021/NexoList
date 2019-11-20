@@ -4,11 +4,11 @@
 					          background-image: url(https://nexolist.com/assets/svg/gallery-icons-light.svg);
 			              }</style><script>// <![CDATA[
 var url = window.location.href;
-                if (url.indexOf("?") < 0) {
+                if (url.indexOf("#") < 0) {
                 console.log(url);
                 stop;
                 }else{
-workaround_hash=location.href.split('?').splice(1).join('?');
+workaround_hash=location.href.split('#').splice(1).join('#');
 window.location.replace(workaround_hash);
 console.log(url);
                 };
