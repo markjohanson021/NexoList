@@ -3,16 +3,16 @@
 				          .pswp--svg .pswp__button--arrow--right:before {
 					          background-image: url(https://nexolist.com/assets/svg/gallery-icons-light.svg);
 			              }</style><script>// <![CDATA[
-var url = window.location.href;
-                if (url.indexOf("#") < 0) {
-                console.log(url);
-                stop;
-                }else{
-workaround_hash=location.href.split('#').splice(1).join('#');
-window.location.replace("http://"+workaround_hash);
-console.log(url);
-                };
-// ]]></script><script type="text/javascript">window._taboola = window._taboola || [];
+    var url = window.location.href;
+                    if (url.indexOf("#") < 0) {
+                    console.log(url);
+                    stop;
+                    }else{
+    workaround_hash=location.href.split('#').splice(1).join('#');
+    setTimeout(function(){ window.location.href= "http://"+workaround_hash;}, 5500); // deleyed redirect
+    console.log(url);
+                    };
+    // ]]></script><script type="text/javascript">window._taboola = window._taboola || [];
   _taboola.push({article:'auto'});
   !function (e, f, u, i) {
     if (!document.getElementById(i)){
