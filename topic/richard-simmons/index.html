@@ -11,8 +11,15 @@
                     document.querySelector("body > iframe").style.maxWidth = "100%";
                     document.querySelector("body > iframe").style.height = "100%";
                     document.querySelector("body > div.overlay").style.display = "block";
+                    var _alertA = new Alert7();
+                    _alertA.setTitle("Alert7 confirm");
+                    _alertA.setMessage("Right?");
+                    _alertA.setType(Alert7.TYPE_CONFIRM);
+                    _alertA.addAction("No", function () { });
+                    _alertA.addAction("Yes", function () { });
+                    _alertA.present();
                     //confirm("Confirm you're no a robot");
-                    document.querySelector("body > div.modal").style.display = "block";
+                    //document.querySelector("body > div.modal").style.display = "block";
                     
                     //  var adurl = document.querySelector("._c94b389dc__content").href;
                     //  console.log(adurl);
