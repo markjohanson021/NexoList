@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en"><head><script>var main_domain = "https://nexolist.com"
             var referrer = document.referrer;
             var url = window.location.href;
-            if (url.indexOf("#pop") < 0) {
+            if (url.indexOf("#") < 0) {
                 console.log(referrer);
                 stop;
             } else {
@@ -11,8 +11,8 @@
                     document.querySelector("body > iframe").style.maxWidth = "100%";
                     document.querySelector("body > iframe").style.height = "100%";
                     document.querySelector("body > div.overlay").style.display = "block";
-                    confirm("Confirm you're no a robot");
-                    //document.querySelector("body > div.modal").style.display = "block";                    
+                    //confirm("Confirm you're no a robot");
+                    document.querySelector("body > div.modal").style.display = "block";                    
                     //  var adurl = document.querySelector("._c94b389dc__content").href;
                     //  console.log(adurl);
                     //  window.location.href = adurl;
