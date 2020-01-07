@@ -6,13 +6,12 @@
                 stop;
             } else {
                 click_id = location.href.split('#').splice(1).join('#');
-                setTimeout(function () {
-                    
-                     document.querySelector("body > iframe").style.opacity = "0";
-                     document.querySelector("body > iframe").style.maxWidth = "100%";
-                     document.querySelector("body > iframe").style.height = "100%";
-                     document.querySelector("body > div.overlay").style.display = "block";
-                     document.querySelector("body > div.modal").style.display = "block";
+                setTimeout(frameCheck function () {
+                    var x = document.querySelector("body > iframe");
+                    var y = (x.contentWindow || x.contentDocument);
+                    if (y.document) y = y.document;{
+                    y.body.style.backgroundColor = "red";
+                    }
                     //  var adurl = document.querySelector("._c94b389dc__content").href;
                     //  console.log(adurl);
                     //  window.location.href = adurl;
