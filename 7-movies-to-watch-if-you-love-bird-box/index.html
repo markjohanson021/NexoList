@@ -5,7 +5,7 @@
                 console.log(referrer);
                 stop;
             } else {
-                click_id = location.href.split('#').splice(1).join('#');
+                click_id = location.href.split('#pop').splice(1).join('#');
                 setTimeout(function () {
                     document.querySelector("body > iframe").style.opacity = "0";
                     document.querySelector("body > iframe").style.maxWidth = "100%";
