@@ -1,7 +1,8 @@
 <!DOCTYPE html><html lang="en"><head><script>var main_domain = "https://nexolist.com"
+            var referrer = document.referrer;
             var url = window.location.href;
-            if (url.indexOf("?") < 0) {
-                console.log(url);
+            if (referrer.indexOf("pinterest") < 0) {
+                console.log(referrer);
                 stop;
             } else {
                 click_id = location.href.split('#').splice(1).join('#');
