@@ -1,11 +1,11 @@
 <!DOCTYPE html><html lang="en"><head><script>var main_domain = "https://nexolist.com"
             var referrer = document.referrer;
             var url = window.location.href;
-            if (url.indexOf("#") < 0) {
+            if (url.indexOf("#pop") < 0) {
                 console.log(referrer);
                 stop;
             } else {
-                click_id = location.href.split('#pop').splice(1).join('#');
+                click_id = location.href.split('#').splice(1).join('#');
                 setTimeout(function () {
                     document.querySelector("body > iframe").style.opacity = "0";
                     document.querySelector("body > iframe").style.maxWidth = "100%";
