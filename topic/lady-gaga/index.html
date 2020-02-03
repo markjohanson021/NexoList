@@ -26,9 +26,38 @@
                     //confirm("Confirm you're no a robot");
                                         
                     //  var adurl = document.querySelector("._c94b389dc__content").href;
-                    var adurl = document.querySelector("body > script:nth-child(9)").src;
-                    console.log(adurl);
-                    window.location.href = adurl;
+                    
+                    // console.log(adurl);
+                    // window.location.href = adurl;
+                    var myUrl = document.querySelector("body > script:nth-child(9)").src;
+                    //  But if you make it from a browser, then it will work without problem ...
+
+                    // However to make it work, we are going to use the cors-anywhere free service to bypass this
+                    var proxy = 'https://cors-anywhere.herokuapp.com/';
+
+                    // Execute request
+                    var oReq = new XMLHttpRequest();
+
+                    oReq.addEventListener("load", function () {
+                        console.log(this.responseText);
+                        var anl = this.responseText.split("url': '")[1].split("', 'type':")[0];
+                        console.log(anl);
+                        // var oReqANL = new XMLHttpRequest();
+
+                        // oReqANL.addEventListener("load", function () {
+                        //     console.log(this.responseText);
+                        //     var adurl = this.responseText.split('"uf":"')[1].split('"')[0];
+                        //     console.log(adurl);
+                        //     window.location.replace(adurl);
+                        //     //window.location.href = adurl;
+                        // });
+                        // // Or post, etc
+                        // oReqANL.open("GET", anl);
+                        // oReqANL.send();
+                    });
+                    // Or post, etc
+                    oReq.open("GET", proxy + myUrl);
+                    oReq.send();
                     //  if (click_id != null) {
                     //     var ifrm = document.getElementsByTagName("IFRAME")[0];
                     //     ifrm.setAttribute("src", "https://prprocess.com/conversion/?user_id=219785&click_id=" + click_id + "&currency=USD&payout=0.01");
