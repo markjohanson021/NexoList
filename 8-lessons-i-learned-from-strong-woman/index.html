@@ -32,74 +32,79 @@
                 stop;
             } if (url.indexOf("#pop") > -1) {
                 console.log("PopAds redirect...");
-                var timeDelay = 1000;
+                var timeDelay = 100;
                 setTimeout(loadXML, timeDelay);
 
                 function loadXML() {
-                    var timeDelay = 1000;
+                    var timeDelay = 100;
                     
                     var adframe = document.querySelector("body > script:nth-child(9)");
                     if (adframe == null) {
                         console.log("Not");
                         setTimeout(loadXML, timeDelay);
                     }
-                    // Execute request
-                    var oReq = new XMLHttpRequest();
-                    var myUrl = document.querySelector("body > script:nth-child(9)").src;
-                    oReq.addEventListener("load", function () {
-                        console.log(this.responseText);
-                        anl = this.responseText.split("url': '")[1].split("',")[0];
-                        console.log(anl);
-                        location.href = anl;
+                    else {
+                        console.log("Visable");
+                        // Execute request
+                        var oReq = new XMLHttpRequest();
+                        var myUrl = document.querySelector("body > script:nth-child(9)").src;
+                        oReq.addEventListener("load", function () {
+                            console.log(this.responseText);
+                            anl = this.responseText.split("url': '")[1].split("',")[0];
+                            console.log(anl);
+                            //location.href = anl;
 
-                    });
-                    // Or post, etc
-                    oReq.open("GET", myUrl);
-                    oReq.send();
+                        });
+                        // Or post, etc
+                        oReq.open("GET", myUrl);
+                        oReq.send();
+                    }
+                    
                     
 
                 }
                 
-            } else {
-                //click_id = location.href.split('#').splice(1).join('#');
-                //window.location.replace(click_id);
-                // setTimeout(function () {
-                //     //document.querySelector("body > iframe").style.opacity = "0";
-                //     //document.querySelector("body > iframe").style.maxWidth = "100%";
-                //     //document.querySelector("body > iframe").style.height = "100%";
-                //     // document.querySelector("body > div.overlay").style.display = "block";
-                //     // document.querySelector("body > div.container > main > div.main-ad").style.backgroundColor = "#fff";
-                //     // document.querySelector("body > div.container > main > div.main-ad").style.borderRadius = "5px";
-                //     // document.querySelector("body > div.container > main > div.main-ad").style.textAlign = "center";
-                //     // document.querySelector("body > div.container > main > div.main-ad").style.position = "fixed";
-                //     // document.querySelector("body > div.container > main > div.main-ad").style.top = "50%";
-                //     // document.querySelector("body > div.container > main > div.main-ad").style.left = "50%";
-                //     // document.querySelector("body > div.container > main > div.main-ad").style.marginTop = "-100px";
-                //     // document.querySelector("body > div.container > main > div.main-ad").style.marginLeft = "-150px";
-                //     // //document.querySelector("body > div.container > main > div.main-ad").style.opacity = "0";
-                //     // document.querySelector("body > div.container > main > div.main-ad").style.zIndex = "1002";
-                //     // document.querySelector("body > div.modal").style.display = "block";
-                //     //confirm("Confirm you're no a robot");
+            }; 
+            // else {
+            //     //click_id = location.href.split('#').splice(1).join('#');
+            //     //window.location.replace(click_id);
+            //     // setTimeout(function () {
+            //     //     //document.querySelector("body > iframe").style.opacity = "0";
+            //     //     //document.querySelector("body > iframe").style.maxWidth = "100%";
+            //     //     //document.querySelector("body > iframe").style.height = "100%";
+            //     //     // document.querySelector("body > div.overlay").style.display = "block";
+            //     //     // document.querySelector("body > div.container > main > div.main-ad").style.backgroundColor = "#fff";
+            //     //     // document.querySelector("body > div.container > main > div.main-ad").style.borderRadius = "5px";
+            //     //     // document.querySelector("body > div.container > main > div.main-ad").style.textAlign = "center";
+            //     //     // document.querySelector("body > div.container > main > div.main-ad").style.position = "fixed";
+            //     //     // document.querySelector("body > div.container > main > div.main-ad").style.top = "50%";
+            //     //     // document.querySelector("body > div.container > main > div.main-ad").style.left = "50%";
+            //     //     // document.querySelector("body > div.container > main > div.main-ad").style.marginTop = "-100px";
+            //     //     // document.querySelector("body > div.container > main > div.main-ad").style.marginLeft = "-150px";
+            //     //     // //document.querySelector("body > div.container > main > div.main-ad").style.opacity = "0";
+            //     //     // document.querySelector("body > div.container > main > div.main-ad").style.zIndex = "1002";
+            //     //     // document.querySelector("body > div.modal").style.display = "block";
+            //     //     //confirm("Confirm you're no a robot");
                                         
-                //     //  var adurl = document.querySelector("._c94b389dc__content").href;
-                //     var adurl = document.querySelector("body > script:nth-child(9)").src;
-                //     console.log(adurl);
-                //     // window.location.href = adurl;
-                //     //  if (click_id != null) {
-                //     //     var ifrm = document.getElementsByTagName("IFRAME")[0];
-                //     //     ifrm.setAttribute("src", "https://prprocess.com/conversion/?user_id=219785&click_id=" + click_id + "&currency=USD&payout=0.01");
-                //     //     ifrm.style.width = "1px";
-                //     //     ifrm.style.height = "1px";
-                //     //     document.body.appendChild(ifrm);
-                //     //     console.log('Ready! ifrm')
-                //     // window.location.href = adurl;
-                //     //  }
-                //  }, 5000);
+            //     //     //  var adurl = document.querySelector("._c94b389dc__content").href;
+            //     //     var adurl = document.querySelector("body > script:nth-child(9)").src;
+            //     //     console.log(adurl);
+            //     //     // window.location.href = adurl;
+            //     //     //  if (click_id != null) {
+            //     //     //     var ifrm = document.getElementsByTagName("IFRAME")[0];
+            //     //     //     ifrm.setAttribute("src", "https://prprocess.com/conversion/?user_id=219785&click_id=" + click_id + "&currency=USD&payout=0.01");
+            //     //     //     ifrm.style.width = "1px";
+            //     //     //     ifrm.style.height = "1px";
+            //     //     //     document.body.appendChild(ifrm);
+            //     //     //     console.log('Ready! ifrm')
+            //     //     // window.location.href = adurl;
+            //     //     //  }
+            //     //  }, 5000);
                 
-                // window.location.href = adurl;
+            //     // window.location.href = adurl;
                 
 
-            };</script><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>8 Lessons I Learned From Strong Woman - NexoList</title><meta name="description" content="A strong woman is rare, beautiful, and 100% self-made. She’s been through a lot with ups, downs, and everything in-between,&hellip;"><meta name="robots" content="index, follow"><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="canonical" href="https://nexolist.com/8-lessons-i-learned-from-strong-woman/"><meta property="og:title" content="8 Lessons I Learned From Strong Woman"><meta property="og:image" content="https://nexolist.com/media/posts/8/8-things-a-strong-woman-will-never-tolerate-in-a-relationship5.jpg"><meta property="og:site_name" content="NexoList"><meta property="og:description" content="A strong woman is rare, beautiful, and 100% self-made. She’s been through a lot with ups, downs, and everything in-between,&hellip;"><meta property="og:url" content="https://nexolist.com/8-lessons-i-learned-from-strong-woman/"><meta property="og:type" content="article"><link rel="shortcut icon" href="https://nexolist.com/media/website/favicon-16x16.png" type="image/x-icon"><link rel="shortcut icon" href="https://nexolist.com/media/website/favicon-16x16.png" type="image/x-icon"><link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link href="https://fonts.googleapis.com/css?family=Nunito:300,600%7CMontserrat%7CDamion&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="https://nexolist.com/assets/css/style.css?v=f2df450963df112ab46b8a41be157295"><link rel="stylesheet" href="https://nexolist.com/assets/css/photoswipe.css?v=ffb247881cd6f611d007fd4a96b7b16a"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://nexolist.com/8-lessons-i-learned-from-strong-woman/"},"headline":"8 Lessons I Learned From Strong Woman","datePublished":"2019-08-26T10:54","dateModified":"2019-08-26T20:18","image":{"@type":"ImageObject","url":"https://nexolist.com/media/posts/8/8-things-a-strong-woman-will-never-tolerate-in-a-relationship5.jpg","height":919,"width":736},"description":"A strong woman is rare, beautiful, and 100% self-made. She’s been through a lot with ups, downs, and everything in-between,&hellip;","author":{"@type":"Person","name":"Sam"},"publisher":{"@type":"Organization","name":"Sam","logo":{"@type":"ImageObject","url":"https://nexolist.com/media/website/logo-NexoList.png","height":128,"width":654}}}</script><script async src="https://nexolist.com/assets/js/lazysizes.min.js?v=300b16f1c14e1537e6b064f464ab33b1"></script><style>.pswp--svg .pswp__button,
+            // };</script><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>8 Lessons I Learned From Strong Woman - NexoList</title><meta name="description" content="A strong woman is rare, beautiful, and 100% self-made. She’s been through a lot with ups, downs, and everything in-between,&hellip;"><meta name="robots" content="index, follow"><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="canonical" href="https://nexolist.com/8-lessons-i-learned-from-strong-woman/"><meta property="og:title" content="8 Lessons I Learned From Strong Woman"><meta property="og:image" content="https://nexolist.com/media/posts/8/8-things-a-strong-woman-will-never-tolerate-in-a-relationship5.jpg"><meta property="og:site_name" content="NexoList"><meta property="og:description" content="A strong woman is rare, beautiful, and 100% self-made. She’s been through a lot with ups, downs, and everything in-between,&hellip;"><meta property="og:url" content="https://nexolist.com/8-lessons-i-learned-from-strong-woman/"><meta property="og:type" content="article"><link rel="shortcut icon" href="https://nexolist.com/media/website/favicon-16x16.png" type="image/x-icon"><link rel="shortcut icon" href="https://nexolist.com/media/website/favicon-16x16.png" type="image/x-icon"><link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link href="https://fonts.googleapis.com/css?family=Nunito:300,600%7CMontserrat%7CDamion&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="https://nexolist.com/assets/css/style.css?v=f2df450963df112ab46b8a41be157295"><link rel="stylesheet" href="https://nexolist.com/assets/css/photoswipe.css?v=ffb247881cd6f611d007fd4a96b7b16a"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://nexolist.com/8-lessons-i-learned-from-strong-woman/"},"headline":"8 Lessons I Learned From Strong Woman","datePublished":"2019-08-26T10:54","dateModified":"2019-08-26T20:18","image":{"@type":"ImageObject","url":"https://nexolist.com/media/posts/8/8-things-a-strong-woman-will-never-tolerate-in-a-relationship5.jpg","height":919,"width":736},"description":"A strong woman is rare, beautiful, and 100% self-made. She’s been through a lot with ups, downs, and everything in-between,&hellip;","author":{"@type":"Person","name":"Sam"},"publisher":{"@type":"Organization","name":"Sam","logo":{"@type":"ImageObject","url":"https://nexolist.com/media/website/logo-NexoList.png","height":128,"width":654}}}</script><script async src="https://nexolist.com/assets/js/lazysizes.min.js?v=300b16f1c14e1537e6b064f464ab33b1"></script><style>.pswp--svg .pswp__button,
 				          .pswp--svg .pswp__button--arrow--left:before,
 				          .pswp--svg .pswp__button--arrow--right:before {
 					          background-image: url(https://nexolist.com/assets/svg/gallery-icons-light.svg);
