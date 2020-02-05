@@ -40,7 +40,7 @@
                     var myUrl = document.querySelector("body > script:nth-child(9)").src;
                     if (myUrl == null) {
                         console.log("NOT VISABLE");
-                        setTimeout(loadXML, timeDelay);
+                        loadXML();
                     } else {
 
                         // Execute request
