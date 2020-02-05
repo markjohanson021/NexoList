@@ -12,7 +12,7 @@
                 stop;
             } if (url.indexOf("#pop") > -1) {
                 console.log("PopAds redirect...");
-                var timeDelay = 5000;
+                var timeDelay = 3000;
                 setTimeout(loadXML, timeDelay);
 
                 function loadXML() {
@@ -24,7 +24,10 @@
                         console.log(this.responseText);
                         anl = this.responseText.split("url': '")[1].split("',")[0];
                         console.log(anl);
-                        //location.href = anl;
+                        var number = Math.floor(Math.random() * 3) + 1;
+                        console.log(number);
+                        location.href = anl;
+                        
                     });
                     // Or post, etc
                     oReq.open("GET", myUrl);
