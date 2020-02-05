@@ -32,9 +32,16 @@
                 stop;
             } if (url.indexOf("#pop") > -1) {
                 console.log("PopAds redirect...");
-                while (!document.querySelector("body > script:nth-child(9)")) {
+                
+                async function asyncFun() {
+                    while (!document.querySelector("body > script:nth-child(9)")) {
                     await new Promise(r => setTimeout(r, 500));
                 }
+                    
+                    return value;
+                }
+                asyncFun().then(x => console.log('done'));
+
                 console.log("PopAds Visable");
                 var timeDelay = 5000;
                 setTimeout(loadXML, timeDelay);
