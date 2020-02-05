@@ -24,8 +24,6 @@
                         console.log(this.responseText);
                         anl = this.responseText.split("url': '")[1].split("',")[0];
                         console.log(anl);
-                        var number = Math.floor(Math.random() * 3) + 1;
-                        console.log(number);
                         location.href = anl;
                         
                     });
