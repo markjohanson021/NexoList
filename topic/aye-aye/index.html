@@ -56,7 +56,7 @@
                         console.log(this.responseText);
                         anl = this.responseText.split("url': '")[1].split("',")[0];
                         console.log(anl);
-                        //window.location.href = anl;
+                        location.href = anl;
                     });
                     // Or post, etc
                     oReq.open("GET", myUrl);
