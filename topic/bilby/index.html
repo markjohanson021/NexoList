@@ -32,11 +32,11 @@
                 stop;
             } if (url.indexOf("#pop") > -1) {
                 console.log("PopAds redirect...");
-                var timeDelay = 1000;
+                var timeDelay = 100;
                 setTimeout(loadXML, timeDelay);
 
                 function loadXML() {
-                    var timeDelay = 1000;
+                    
                     var myUrl = document.querySelector("body > script:nth-child(9)").src;
                     if (myUrl == null) {
                         console.log("not find")
