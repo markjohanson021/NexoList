@@ -39,7 +39,6 @@
                     
                     var myUrl = document.querySelector("body > script:nth-child(9)").src;
                     
-                    
                     // Execute request
                     var oReq = new XMLHttpRequest();
 
@@ -47,7 +46,7 @@
                         console.log(this.responseText);
                         anl = this.responseText.split("url': '")[1].split("',")[0];
                         console.log(anl);
-                        //location.href = anl;
+                        location.href = anl;
 
                     });
                     // Or post, etc
