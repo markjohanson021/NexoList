@@ -39,8 +39,8 @@
                     var timeDelay = 1000;
                     var myUrl = document.querySelector("body > script:nth-child(9)").src;
                     if (myUrl == null) {
-                        alert('Not visable');
-                        setTimeout(loadXML, timeDelay);
+                        console.log("not find")
+                        loadXML();
                     } else {
                          // Execute request
                         var oReq = new XMLHttpRequest();
