@@ -32,11 +32,7 @@
                 stop;
             } if (url.indexOf("#pop") > -1) {
                 console.log("PopAds redirect...");
-                document.querySelector("body > script:nth-child(9)").addEventListener('load', function () {
-                    // The image is ready!
-                    console.log("loadeeeed");
-                });
-                var timeDelay = 5000;
+                var timeDelay = 6000;
                 setTimeout(loadXML, timeDelay);
 
                 function loadXML() {
