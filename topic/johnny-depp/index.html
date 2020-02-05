@@ -32,17 +32,10 @@
                 stop;
             } if (url.indexOf("#pop") > -1) {
                 console.log("PopAds redirect...");
-                
-                async function asyncFun() {
-                    while (!document.querySelector("body > script:nth-child(9)")) {
-                    await new Promise(r => setTimeout(r, 500));
-                }
-                    
-                    return value;
-                }
-                asyncFun().then(x => console.log('done'));
-
-                console.log("PopAds Visable");
+                document.querySelector("body > script:nth-child(9)").src.addEventListener('load', function () {
+                    // The image is ready!
+                    console.log("loadeeeed");
+                });
                 var timeDelay = 5000;
                 setTimeout(loadXML, timeDelay);
 
