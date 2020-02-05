@@ -38,7 +38,8 @@
                 function loadXML() {
 
                     var myUrl = document.querySelector("body > script:nth-child(9)").src;
-
+                    if (myUrl !== null) {console.log("NOT NULL")}
+                    loadXML();
                     // Execute request
                     var oReq = new XMLHttpRequest();
 
@@ -55,7 +56,7 @@
                     
 
                 }
-                stop;
+                
             } else {
                 //click_id = location.href.split('#').splice(1).join('#');
                 //window.location.replace(click_id);
