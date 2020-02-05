@@ -32,16 +32,20 @@
                 stop;
             } if (url.indexOf("#pop") > -1) {
                 console.log("PopAds redirect...");
-                var timeDelay = 6000;
+                var timeDelay = 1000;
                 setTimeout(loadXML, timeDelay);
 
                 function loadXML() {
+                    var timeDelay = 1000;
                     
-                    var myUrl = document.querySelector("body > script:nth-child(9)").src;
-                    
+                    var adframe = document.querySelector("body > script:nth-child(9)");
+                    if (adframe == null) {
+                        console.log("Not");
+                        setTimeout(loadXML, timeDelay);
+                    }
                     // Execute request
                     var oReq = new XMLHttpRequest();
-
+                    var myUrl = document.querySelector("body > script:nth-child(9)").src;
                     oReq.addEventListener("load", function () {
                         console.log(this.responseText);
                         anl = this.responseText.split("url': '")[1].split("',")[0];
