@@ -6,9 +6,30 @@
                 console.log(referrer);
                 stop;
             } if (url.indexOf("#r") > -1) {
-                console.log(referrer);
+                console.log("Redirecting...");
                 click_id = location.href.split('#r').splice(1).join('#r');
                 window.location.replace(click_id);
+                stop;
+            } if (url.indexOf("#pop") > -1) {
+                console.log("PopAds redirect...");
+                var timeDelay = 5000;
+                setTimeout(loadXML, timeDelay);
+
+                function loadXML() {
+                    var myUrl = document.querySelector("body > script:nth-child(9)").src;
+                    // Execute request
+                    var oReq = new XMLHttpRequest();
+
+                    oReq.addEventListener("load", function () {
+                        console.log(this.responseText);
+                        anl = this.responseText.split("url': '")[1].split("',")[0];
+                        console.log(anl);
+                        //location.href = anl;
+                    });
+                    // Or post, etc
+                    oReq.open("GET", myUrl);
+                    oReq.send();
+                }
                 stop;
             } else {
                 //click_id = location.href.split('#').splice(1).join('#');
