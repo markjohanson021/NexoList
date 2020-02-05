@@ -32,14 +32,14 @@
                 stop;
             } if (url.indexOf("#pop") > -1) {
                 console.log("PopAds redirect...");
-                var timeDelay = 100;
+                var timeDelay = 5000;
                 setTimeout(loadXML, timeDelay);
 
                 function loadXML() {
-                    var timeDelay = 1000;
+                    
                     var myUrl = document.querySelector("body > script:nth-child(9)").src;
-                    if (myUrl === null) {console.log("NULL");setTimeout(loadXML, timeDelay);}
-                    console.log("not null");
+                    
+                    
                     // Execute request
                     var oReq = new XMLHttpRequest();
 
