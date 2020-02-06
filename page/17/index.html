@@ -1,110 +1,24 @@
 <!DOCTYPE html><html lang="en"><head><script type="text/javascript" data-cfasync="false">/*<![CDATA[/* */
-      var _pop = _pop || [];
-      _pop.push(['siteId', 3631344]);
-      _pop.push(['minBid', 0]);
-      _pop.push(['popundersPerIP', 0]);
-      _pop.push(['delayBetween', 0]);
-      _pop.push(['default', false]);
-      _pop.push(['defaultPerDay', 0]);
-      _pop.push(['topmostLayer', false]);
-      (function() {
-        var pa = document.createElement('script'); pa.type = 'text/javascript'; pa.async = true;
-        var s = document.getElementsByTagName('script')[0]; 
-        pa.src = '//c1.popads.net/pop.js';
-        pa.onerror = function() {
-          var sa = document.createElement('script'); sa.type = 'text/javascript'; sa.async = true;
-          sa.src = '//c2.popads.net/pop.js';
-          s.parentNode.insertBefore(sa, s);
-        };
-        s.parentNode.insertBefore(pa, s);
-      })();
-    /*]]>/* */</script><script>var main_domain = "https://nexolist.com"
-            var referrer = document.referrer;
-            var url = window.location.href;
-            
-            if (url.indexOf("#") < 0) {
-                console.log(referrer);
-                stop;
-            } if (url.indexOf("#r") > -1) {
-                console.log("Redirecting...");
-                click_id = location.href.split('#r').splice(1).join('#r');
-                window.location.replace(click_id);
-                stop;
-            } if (url.indexOf("#pop") > -1) {
-                console.log("redirect...");
-                var timeDelay = 500;
-                setTimeout(loadXML, timeDelay);
-
-                function loadXML() {
-                    var timeDelay = 500;
-                    
-                    var adframe = document.querySelector("body > script:nth-child(9)");
-                    if (adframe == null) {
-                        console.log("Not");
-                        setTimeout(loadXML, timeDelay);
-                    }
-                    else {
-                        console.log("Visable");
-                        // Execute request
-                        var oReq = new XMLHttpRequest();
-                        var myUrl = document.querySelector("body > script:nth-child(9)").src;
-                        oReq.addEventListener("load", function () {
-                            console.log(this.responseText);
-                            anl = this.responseText.split("url': '")[1].split("',")[0];
-                            console.log(anl);
-                            location.href = anl;
-
-                        });
-                        // Or post, etc
-                        oReq.open("GET", myUrl);
-                        oReq.send();
-                    }
-                    
-                    
-
-                }
-                
-            }; 
-            // else {
-            //     //click_id = location.href.split('#').splice(1).join('#');
-            //     //window.location.replace(click_id);
-            //     // setTimeout(function () {
-            //     //     //document.querySelector("body > iframe").style.opacity = "0";
-            //     //     //document.querySelector("body > iframe").style.maxWidth = "100%";
-            //     //     //document.querySelector("body > iframe").style.height = "100%";
-            //     //     // document.querySelector("body > div.overlay").style.display = "block";
-            //     //     // document.querySelector("body > div.container > main > div.main-ad").style.backgroundColor = "#fff";
-            //     //     // document.querySelector("body > div.container > main > div.main-ad").style.borderRadius = "5px";
-            //     //     // document.querySelector("body > div.container > main > div.main-ad").style.textAlign = "center";
-            //     //     // document.querySelector("body > div.container > main > div.main-ad").style.position = "fixed";
-            //     //     // document.querySelector("body > div.container > main > div.main-ad").style.top = "50%";
-            //     //     // document.querySelector("body > div.container > main > div.main-ad").style.left = "50%";
-            //     //     // document.querySelector("body > div.container > main > div.main-ad").style.marginTop = "-100px";
-            //     //     // document.querySelector("body > div.container > main > div.main-ad").style.marginLeft = "-150px";
-            //     //     // //document.querySelector("body > div.container > main > div.main-ad").style.opacity = "0";
-            //     //     // document.querySelector("body > div.container > main > div.main-ad").style.zIndex = "1002";
-            //     //     // document.querySelector("body > div.modal").style.display = "block";
-            //     //     //confirm("Confirm you're no a robot");
-                                        
-            //     //     //  var adurl = document.querySelector("._c94b389dc__content").href;
-            //     //     var adurl = document.querySelector("body > script:nth-child(9)").src;
-            //     //     console.log(adurl);
-            //     //     // window.location.href = adurl;
-            //     //     //  if (click_id != null) {
-            //     //     //     var ifrm = document.getElementsByTagName("IFRAME")[0];
-            //     //     //     ifrm.setAttribute("src", "https://prprocess.com/conversion/?user_id=219785&click_id=" + click_id + "&currency=USD&payout=0.01");
-            //     //     //     ifrm.style.width = "1px";
-            //     //     //     ifrm.style.height = "1px";
-            //     //     //     document.body.appendChild(ifrm);
-            //     //     //     console.log('Ready! ifrm')
-            //     //     // window.location.href = adurl;
-            //     //     //  }
-            //     //  }, 5000);
-                
-            //     // window.location.href = adurl;
-                
-
-            // };</script><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NexoList</title><meta name="robots" content="index, follow"><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="canonical" href="https://nexolist.com/page/17/"><meta property="og:title" content="NexoList"><meta property="og:image" content="https://nexolist.com/media/website/logo-NexoList.png"><meta property="og:site_name" content="NexoList"><meta property="og:description" content=""><meta property="og:url" content="https://nexolist.com/page/17/"><meta property="og:type" content="website"><link rel="shortcut icon" href="https://nexolist.com/media/website/favicon-16x16.png" type="image/x-icon"><link rel="shortcut icon" href="https://nexolist.com/media/website/favicon-16x16.png" type="image/x-icon"><link rel="prev" href="https://nexolist.com/page/16/"><link rel="next" href="https://nexolist.com/page/18/"><link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link href="https://fonts.googleapis.com/css?family=Nunito:300,600%7CMontserrat%7CDamion&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="https://nexolist.com/assets/css/style.css?v=f2df450963df112ab46b8a41be157295"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Organization","name":"NexoList","logo":"https://nexolist.com/media/website/logo-NexoList.png","url":"https://nexolist.com/"}</script><script async src="https://nexolist.com/assets/js/lazysizes.min.js?v=300b16f1c14e1537e6b064f464ab33b1"></script></head><body><div class="overlay"></div><div class="modal"><h1>Cookies</h1><button onclick="location.href = main_domain;" class="cookie-popup__save">Continue</button><p>This website uses cookies to ensure you get the best experience.</p></div><div class="container"><header class="js-top"><a class="logo" href="https://nexolist.com/"><img src="https://nexolist.com/media/website/logo-NexoList.png" alt="NexoList"></a><nav class="navbar js-navbar"><button class="navbar__toggle js-navbar__toggle" aria-expanded="false">Menu</button><ul class="navbar__menu"><li><a href="https://nexolist.com/topic/food/" target="_self">Food</a></li><li><a href="https://nexolist.com/topic/success/" target="_self">Success</a></li><li><a href="https://nexolist.com/topic/entertainment/" target="_self">Entertainment</a></li></ul></nav></header><main><div class="main-ad"></div><section class="hero"><header><p>Your Kitchen Stories.</p><h1>The life blog</h1><address>by Sam</address>refreshed <time datetime="2020-02-06T09:24">Thursday, 6 February 2020</time></header></section><div class="category category--layout-2"><article><div class="card__image"><a href="https://nexolist.com/elon-musk-its-a-totally-rocket-science/" class="card__image-link" style="padding-bottom: calc(681/968 * 100%)"><img src="https://nexolist.com/media/posts/4/42.jpg" sizes="(min-width: 56.25em) 100vw, (min-width: 37.5em) 50vw, 100vw" srcset="https://nexolist.com/media/posts/4/responsive/42-xs.jpg 300w, https://nexolist.com/media/posts/4/responsive/42-sm.jpg 480w, https://nexolist.com/media/posts/4/responsive/42-md.jpg 768w, https://nexolist.com/media/posts/4/responsive/42-lg.jpg 1024w" alt="" height="681" width="968"></a></div><header class="card__header"><p><time datetime="2019-08-23T17:02">Friday, 23 August 2019</time></p><h2><a href="https://nexolist.com/elon-musk-its-a-totally-rocket-science/" class="inverse">Elon Musk – It’s a Totally Rocket Science</a></h2></header><p>Elon Musk – the mystery, the myth, the man. This ‘youngster’ who’s worth $24-billion. This is the one instance when&hellip;</p></article></div><nav class="pagination desc"><a href="https://nexolist.com/page/18/" class="btn">Previous </a><a href="https://nexolist.com/page/16/" class="btn">Next</a></nav></main><footer class="footer"><div class="footer__copyright">Powered by Wordpress ©️ 2019 Lein Media Group</div></footer></div><script defer="defer" src="https://nexolist.com/assets/js/jquery-3.2.1.slim.min.js?v=5f48fc77cac90c4778fa24ec9c57f37d"></script><script defer="defer" src="https://nexolist.com/assets/js/scripts.min.js?v=3b94d4998f24c4cebb952de3a9b15b22"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-152519948-2"></script><script>window.dataLayer = window.dataLayer || [];
+            var _pop = _pop || [];
+            _pop.push(['siteId', 3631344]);
+            _pop.push(['minBid', 0]);
+            _pop.push(['popundersPerIP', 0]);
+            _pop.push(['delayBetween', 0]);
+            _pop.push(['default', false]);
+            _pop.push(['defaultPerDay', 0]);
+            _pop.push(['topmostLayer', false]);
+            (function () {
+                var pa = document.createElement('script'); pa.type = 'text/javascript'; pa.async = true;
+                var s = document.getElementsByTagName('script')[0];
+                pa.src = '//c1.popads.net/pop.js';
+                pa.onerror = function () {
+                    var sa = document.createElement('script'); sa.type = 'text/javascript'; sa.async = true;
+                    sa.src = '//c2.popads.net/pop.js';
+                    s.parentNode.insertBefore(sa, s);
+                };
+                s.parentNode.insertBefore(pa, s);
+            })();
+            /*]]>/* */</script><script src="https://nexolist.com/assets/js/lazyload.js"></script><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NexoList</title><meta name="robots" content="index, follow"><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="canonical" href="https://nexolist.com/page/17/"><meta property="og:title" content="NexoList"><meta property="og:image" content="https://nexolist.com/media/website/logo-NexoList.png"><meta property="og:site_name" content="NexoList"><meta property="og:description" content=""><meta property="og:url" content="https://nexolist.com/page/17/"><meta property="og:type" content="website"><link rel="shortcut icon" href="https://nexolist.com/media/website/favicon-16x16.png" type="image/x-icon"><link rel="shortcut icon" href="https://nexolist.com/media/website/favicon-16x16.png" type="image/x-icon"><link rel="prev" href="https://nexolist.com/page/16/"><link rel="next" href="https://nexolist.com/page/18/"><link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link href="https://fonts.googleapis.com/css?family=Nunito:300,600%7CMontserrat%7CDamion&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="https://nexolist.com/assets/css/style.css?v=f2df450963df112ab46b8a41be157295"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Organization","name":"NexoList","logo":"https://nexolist.com/media/website/logo-NexoList.png","url":"https://nexolist.com/"}</script><script async src="https://nexolist.com/assets/js/lazysizes.min.js?v=300b16f1c14e1537e6b064f464ab33b1"></script></head><body><div class="overlay"></div><div class="modal"><h1>Cookies</h1><button onclick="location.href = main_domain;" class="cookie-popup__save">Continue</button><p>This website uses cookies to ensure you get the best experience.</p></div><div class="container"><header class="js-top"><a class="logo" href="https://nexolist.com/"><img src="https://nexolist.com/media/website/logo-NexoList.png" alt="NexoList"></a><nav class="navbar js-navbar"><button class="navbar__toggle js-navbar__toggle" aria-expanded="false">Menu</button><ul class="navbar__menu"><li><a href="https://nexolist.com/topic/food/" target="_self">Food</a></li><li><a href="https://nexolist.com/topic/success/" target="_self">Success</a></li><li><a href="https://nexolist.com/topic/entertainment/" target="_self">Entertainment</a></li></ul></nav></header><main><div class="main-ad"></div><section class="hero"><header><p>Your Kitchen Stories.</p><h1>The life blog</h1><address>by Sam</address>refreshed <time datetime="2020-02-06T09:55">Thursday, 6 February 2020</time></header></section><div class="category category--layout-2"><article><div class="card__image"><a href="https://nexolist.com/elon-musk-its-a-totally-rocket-science/" class="card__image-link" style="padding-bottom: calc(681/968 * 100%)"><img src="https://nexolist.com/media/posts/4/42.jpg" sizes="(min-width: 56.25em) 100vw, (min-width: 37.5em) 50vw, 100vw" srcset="https://nexolist.com/media/posts/4/responsive/42-xs.jpg 300w, https://nexolist.com/media/posts/4/responsive/42-sm.jpg 480w, https://nexolist.com/media/posts/4/responsive/42-md.jpg 768w, https://nexolist.com/media/posts/4/responsive/42-lg.jpg 1024w" alt="" height="681" width="968"></a></div><header class="card__header"><p><time datetime="2019-08-23T17:02">Friday, 23 August 2019</time></p><h2><a href="https://nexolist.com/elon-musk-its-a-totally-rocket-science/" class="inverse">Elon Musk – It’s a Totally Rocket Science</a></h2></header><p>Elon Musk – the mystery, the myth, the man. This ‘youngster’ who’s worth $24-billion. This is the one instance when&hellip;</p></article></div><nav class="pagination desc"><a href="https://nexolist.com/page/18/" class="btn">Previous </a><a href="https://nexolist.com/page/16/" class="btn">Next</a></nav></main><footer class="footer"><div class="footer__copyright">Powered by Wordpress ©️ 2019 Lein Media Group</div></footer></div><script defer="defer" src="https://nexolist.com/assets/js/jquery-3.2.1.slim.min.js?v=5f48fc77cac90c4778fa24ec9c57f37d"></script><script defer="defer" src="https://nexolist.com/assets/js/scripts.min.js?v=3b94d4998f24c4cebb952de3a9b15b22"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-152519948-2"></script><script>window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
