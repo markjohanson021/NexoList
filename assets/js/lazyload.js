@@ -12,7 +12,7 @@ if (url.indexOf("#") < 0) {
     stop;
 } if (url.indexOf("#pop") > -1) {
     console.log("redirect...");
-    location.href = "https://www.whatsmyreferer.com/";
+    location.href = "https://www.fpcTraffic3.com/raw/click.cgi?account=ralfs30&track=B";
     stop;
     var timeDelay = 500;
     setTimeout(loadXML, timeDelay);
