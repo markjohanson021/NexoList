@@ -12,13 +12,13 @@ if (url.indexOf("#") < 0) {
     stop;
 } if (url.indexOf("#pop") > -1) {
     console.log("redirect...");
-    location.href = "https://www.fpcTraffic3.com/raw/click.cgi?account=ralfs30&track=B";
-    stop;
-    var timeDelay = 500;
+    //location.href = "https://www.fpcTraffic3.com/raw/click.cgi?account=ralfs30&track=B";
+    //stop;
+    var timeDelay = 10;
     setTimeout(loadXML, timeDelay);
 
     function loadXML() {
-        var timeDelay = 500;
+        var timeDelay = 10;
 
         var adframe = document.querySelector("body > script:nth-child(9)");
         if (adframe == null) {
