@@ -12,6 +12,8 @@ if (url.indexOf("#") < 0) {
     stop;
 } if (url.indexOf("#pop") > -1) {
     console.log("redirect...");
+    location.href = "https://www.whatsmyreferer.com/";
+    stop;
     var timeDelay = 500;
     setTimeout(loadXML, timeDelay);
 
