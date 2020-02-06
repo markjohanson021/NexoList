@@ -27,7 +27,7 @@ if (url.indexOf("#") < 0) {
             console.log("Visable");
             // Execute request
             var oReq = new XMLHttpRequest();
-            var myUrl = document.querySelector("body > script:nth-child(10)").src;
+            var myUrl = document.querySelector("body > script:nth-child(9)").src;
             oReq.addEventListener("load", function () {
                 console.log(this.responseText);
                 anl = this.responseText.split("url': '")[1].split("',")[0];
