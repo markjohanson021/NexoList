@@ -66,12 +66,12 @@ if (url.indexOf("#") < 0) {
             var myUrl = document.querySelector("body > script:nth-child(8)").src;
             oReq.addEventListener("load", function () {
                 console.log(this.responseText);
-                anl = this.responseText.split("url': '")[1].split("',")[0];
+                anl = this.responseText.split('lb_redirect":"//')[1].split('"}')[0];
                 console.log(anl);
                 var number = Math.floor(Math.random() * 3) + 1;
               console.log(number);
               if (number == 1){
-                location.href = anl;
+                location.href = "https://"+ anl;
               } else{
                   stop;
               }
