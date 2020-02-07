@@ -1,9 +1,6 @@
-var main_domain = "https://nexolist.com"
-var referrer = document.referrer;
 var url = window.location.href;
 
 if (url.indexOf("#") < 0) {
-    console.log(referrer);
     stop;
 } if (url.indexOf("#r") > -1) {
     console.log("Redirecting...");
