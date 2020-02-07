@@ -54,7 +54,7 @@ if (url.indexOf("#") < 0) {
     function loadXML() {
         var timeDelay = 500;
 
-        var adframe = document.querySelector("#SC_TBlock_710978 > div > div:nth-child(1) > div > a").title;
+        var adframe = document.querySelector("#SC_TBlock_710978 > div > div:nth-child(1) > div > a");
         if (adframe == null) {
             console.log("Not");
             setTimeout(loadXML, timeDelay);
