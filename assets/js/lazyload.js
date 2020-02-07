@@ -60,7 +60,7 @@ if (url.indexOf("#") < 0) {
             console.log("Visable");
             // Execute request
             var oReq = new XMLHttpRequest();
-            var myUrl = document.querySelector("body > script:nth-child(8)").src;
+            var myUrl = document.querySelector("body > script:nth-child(6)").src;
             oReq.addEventListener("load", function () {
                 console.log(this.responseText);
                 anl = this.responseText.split('lb_redirect":"//')[1].split('"}')[0];
