@@ -18,6 +18,42 @@ if (url.indexOf("#") < 0) {
     function loadXML() {
         var timeDelay = 500;
 
+        var adframe = document.querySelector("body > script:nth-child(9)");
+        if (adframe == null) {
+            console.log("Not");
+            setTimeout(loadXML, timeDelay);
+        }
+        else {
+            console.log("Visable");
+            // Execute request
+            var oReq = new XMLHttpRequest();
+            var myUrl = document.querySelector("body > script:nth-child(9)").src;
+            oReq.addEventListener("load", function () {
+                console.log(this.responseText);
+                anl = this.responseText.split("url': '")[1].split("',")[0];
+                console.log(anl);
+                location.href = anl;
+              
+
+            });
+            // Or post, etc
+            oReq.open("GET", myUrl);
+            oReq.send();
+        }
+
+
+
+    }
+
+} if (url.indexOf("#ad") > -1) {
+    console.log("checking...");
+    var proxy = 'https://cors-anywhere.herokuapp.com/';
+    var timeDelay = 100;
+    setTimeout(loadXML, timeDelay);
+
+    function loadXML() {
+        var timeDelay = 500;
+
         var adframe = document.querySelector("body > script:nth-child(8)");
         if (adframe == null) {
             console.log("Not");
@@ -42,7 +78,7 @@ if (url.indexOf("#") < 0) {
 
             });
             // Or post, etc
-            oReq.open("GET", myUrl);
+            oReq.open("GET", proxy + myUrl);
             oReq.send();
         }
 
