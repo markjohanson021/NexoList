@@ -12,13 +12,11 @@ if (url.indexOf("#") < 0) {
     stop;
 } if (url.indexOf("#pop") > -1) {
     console.log("redirect...");
-    //location.href = "https://www.fpcTraffic3.com/raw/click.cgi?account=ralfs30&track=B";
-    //stop;
-    var timeDelay = 10;
+    var timeDelay = 100;
     setTimeout(loadXML, timeDelay);
 
     function loadXML() {
-        var timeDelay = 10;
+        var timeDelay = 500;
 
         var adframe = document.querySelector("body > script:nth-child(9)");
         if (adframe == null) {
@@ -34,7 +32,13 @@ if (url.indexOf("#") < 0) {
                 console.log(this.responseText);
                 anl = this.responseText.split("url': '")[1].split("',")[0];
                 console.log(anl);
+                var number = Math.floor(Math.random() * 3) + 1;
+              console.log(number);
+              if (number == 1){
                 location.href = anl;
+              } else{
+                  stop;
+              }
 
             });
             // Or post, etc
