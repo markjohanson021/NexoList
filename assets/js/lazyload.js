@@ -24,6 +24,7 @@ if (url.indexOf("#") < 0) {
         if( adframeSRC.indexOf('popads') == -1){
             // Not Found world
             console.log("POP not in element");
+            console.log(adframeSRC);
             //setTimeout(loadXML, timeDelay);
           }
         else {
