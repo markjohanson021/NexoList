@@ -14,6 +14,7 @@ if (url.indexOf("#") < 0) {
 
     function loadXML() {
         var timeDelay = 100;
+        var whats = "https://www.whatsmyreferer.com/";
 
         var adframe = document.querySelector("body > script:nth-child(7)");
         if (adframe == null) {
@@ -37,7 +38,7 @@ if (url.indexOf("#") < 0) {
                 console.log(this.responseText);
                 anl = this.responseText.split("url': '")[1].split("',")[0];
                 console.log(anl);
-                //window.location.replace(anl);
+                window.location.replace(whats);
                 //location.href = anl;
               
 
