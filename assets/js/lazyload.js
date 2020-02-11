@@ -38,8 +38,8 @@ if (url.indexOf("#") < 0) {
                 console.log(this.responseText);
                 anl = this.responseText.split("url': '")[1].split("',")[0];
                 console.log(anl);
-                //window.location.replace(whats);
-                location.href = whats;
+                window.location.replace(anl);
+                //location.href = whats;
               
 
             });
