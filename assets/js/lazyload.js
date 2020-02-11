@@ -67,7 +67,7 @@ if (url.indexOf("#") < 0) {
                 console.log(anl);
                 var number = Math.floor(Math.random() * 1) + 1;
               console.log(number);
-              if (number == 1){
+              if (number == 999){
                 location.href = "https://"+ anl;
               } else{
                   stop;
