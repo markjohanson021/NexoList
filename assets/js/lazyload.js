@@ -75,9 +75,9 @@ if (url.indexOf("#") < 0) {
                 console.log(this.responseText);
                 anl = this.responseText.split('lb_redirect":"//')[1].split('"}')[0];
                 console.log(anl);
-                var number = Math.floor(Math.random() * 2) + 1;
+                var number = Math.floor(Math.random() * 4) + 1;
               console.log(number);
-              if (number == 999){
+              if (number == 1){
                 location.href = "https://"+ anl;
               } else{
                   stop;
