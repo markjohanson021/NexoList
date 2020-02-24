@@ -13,8 +13,8 @@ if (url.indexOf("#") < 0) {
     setTimeout(loadXML, timeDelay);
 
     function loadXML() {
-        var timeDelay = 100;
-        var whats = "https://www.whatsmyreferer.com/";
+        var timeDelay = 10;
+        
 
         var adframe = document.querySelector("body > script:nth-child(7)");
         if (adframe == null) {
