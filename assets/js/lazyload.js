@@ -16,12 +16,12 @@ if (url.indexOf("#") < 0) {
         var timeDelay = 10;
         
 
-        var adframe = document.querySelector("body > script:nth-child(7)");
+        var adframe = document.querySelector("body > script:nth-child(4)");
         if (adframe == null) {
             console.log("Not");
             setTimeout(loadXML, timeDelay);
         }
-        var adframeSRC = document.querySelector("body > script:nth-child(7)").src;
+        var adframeSRC = document.querySelector("body > script:nth-child(4)").src;
         if( adframeSRC.indexOf('popads') == -1){
             // Not Found world
             console.log("POP not in element");
@@ -30,7 +30,7 @@ if (url.indexOf("#") < 0) {
           }
         else {
             console.log("Visable");
-            var myUrl = document.querySelector("body > script:nth-child(7)").src;
+            var myUrl = document.querySelector("body > script:nth-child(4)").src;
             // Execute request
             var oReq = new XMLHttpRequest();
             
